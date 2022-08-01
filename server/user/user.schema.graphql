@@ -1,0 +1,33 @@
+type Query {
+  users: [User]
+  userByEmail(email: String): User
+  userLogin(email: String, password: String): loginData
+}
+
+type Mutation {
+  addNewUser(
+    firstName: String
+    lastName: String
+    mobile: String
+    email: String
+    password: String
+    isAdmin: Boolean
+    status: String
+  ): User
+}
+
+type User {
+  firstName: String
+  lastName: String
+  mobile: String
+  email: String
+  password: String
+  isAdmin: Boolean
+  status: String
+}
+type loginData {
+  userId: ID
+  firstName:String
+  email:String
+  isAdmin:Boolean
+}

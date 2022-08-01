@@ -1,0 +1,10 @@
+type Query {
+  menus: [Menu]
+}
+type Menu {
+  id: ID
+  name: String
+  price: Float
+  volume: String
+  type: String
+}
